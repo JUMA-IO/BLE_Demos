@@ -230,7 +230,7 @@
       <Focus>0</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\sdk\lib\juma_sdk.lib</PathWithFileName>
+      <PathWithFileName>..\..\..\..\sdk\lib\juma_sdk.lib</PathWithFileName>
       <FilenameWithoutPath>juma_sdk.lib</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

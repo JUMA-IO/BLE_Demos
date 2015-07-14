@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\sdk\include</IncludePath>
+              <IncludePath>..\..\..\..\sdk\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -421,7 +421,7 @@
             <File>
               <FileName>juma_sdk.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\..\..\sdk\lib\juma_sdk.lib</FilePath>
+              <FilePath>..\..\..\..\sdk\lib\juma_sdk.lib</FilePath>
             </File>
           </Files>
         </Group>
