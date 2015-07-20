@@ -1,4 +1,4 @@
-package com.example.juswitch;
+package com.example.mycar;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -165,7 +165,7 @@ public class CustomDialog extends Dialog implements android.view.View.OnClickLis
 		case R.id.btnStartScan:
 			
 			String name = etInput.getText().toString();
-            Log.e("name", ""+name);
+
 			if(scanCallback != null)
 				scanCallback.onName(name);
 
