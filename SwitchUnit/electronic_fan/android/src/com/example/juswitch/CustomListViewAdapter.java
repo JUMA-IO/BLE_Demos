@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,14 +16,12 @@ public class CustomListViewAdapter extends BaseAdapter {
 	public static final String UUID_STR = "uuid";
 	public static final String RSSI_STR = "rssi";
 	
-	private List<HashMap<String, Object>> deviceInfo = null;;
-	
-	private LayoutInflater inflater = null;;
+	private List<HashMap<String, Object>> deviceInfo = null;
+	private LayoutInflater inflater = null;
 
 	public CustomListViewAdapter(Context context,  List<HashMap<String, Object>> deviceInfo) {
 		inflater = LayoutInflater.from(context);
 		this.deviceInfo = deviceInfo;
-Log.e("cl","1" );
 	}
 
 	@Override
@@ -49,7 +46,7 @@ Log.e("cl","1" );
 		if (convertView != null) {
 			vg = (ViewGroup) convertView;
 		} else {
-			vg = (ViewGroup) inflater.inflate(R.layout.devcie_list_item, null);
+			vg = (ViewGroup) inflater.inflate(R.layout.devcie_list_item, parent,false);
 		}
 
 		TextView tvName = ((TextView) vg.findViewById(R.id.tvName));
