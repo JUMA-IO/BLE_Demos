@@ -10,69 +10,69 @@
         android:layout_height="60dp"
         android:background="#666666"
         android:gravity="center"
-        android:text="Motor"
+        android:text="@string/mo_mo"
         android:textColor="#ffffff"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-          android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin" >
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Choose:"
+            android:text="@string/mo_choose"
             android:textColor="#000000"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/bt5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Car" />
+            android:text="@string/mo_car" />
     </TableRow>
 
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
-          android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#6699ff">
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="#6699ff">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Left Moto"
+            android:text="@string/mo_left"
             android:textColor="#000000"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Right Moto"
+            android:text="@string/mo_right"
             android:textColor="#000000"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-          android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin" 
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" 
     >
 
         <TextView
@@ -85,8 +85,8 @@
             android:id="@+id/bt1"
             android:layout_width="150dp"
             android:layout_height="90dp"
-            android:text="UP"
-            android:textSize="20dp" />
+            android:text="@string/mo_up"
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="0dp"
@@ -98,8 +98,8 @@
             android:id="@+id/bt2"
             android:layout_width="150dp"
             android:layout_height="90dp"
-            android:text="UP"
-            android:textSize="20dp" />
+            android:text="@string/mo_up"
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="0dp"
@@ -111,10 +111,10 @@
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-          android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
 >
 
         <TextView
@@ -127,8 +127,8 @@
             android:id="@+id/bt3"
             android:layout_width="150dp"
             android:layout_height="90dp"
-            android:text="DOWN"
-            android:textSize="20dp" />
+            android:text="@string/mo_down"
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="0dp"
@@ -140,8 +140,8 @@
             android:id="@+id/bt4"
             android:layout_width="150dp"
             android:layout_height="90dp"
-            android:text="DOWN"
-            android:textSize="20dp" />
+            android:text="@string/mo_down"
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="0dp"

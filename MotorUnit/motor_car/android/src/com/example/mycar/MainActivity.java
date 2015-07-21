@@ -17,7 +17,7 @@
  * specific language governing permissions and limitations
  * under the License.
  *
- * Author CN, JUMA Inc.
+ * Author CNM, JUMA Inc.
  *
 */
 
@@ -39,7 +39,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -53,61 +52,54 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-private Button rightadd,leftadd,leftcut,rightcut,choosecar;
-
 public static final String ACTION_DEVICE_DISCOVERED = "com.juma.demo.ACTION_DEVICE_DISCOVERED";
 public static final String ACTION_CONNECTED = "com.juma.demo.ACTION_CONNECTED";
 public static final String ACTION_DISCONNECTED = "com.juma.demo.ACTION_DISCONNECTED";
-
 public static final String NAME_STR = "name";
-
 public static final String UUID_STR = "uuid";
-
 public static final String RSSI_STR = "rssi";
 
-public static final String MESSAGE_STR = "message";
-
-public static final String ERROR_STR = "error";
-
 private JumaDevice device = null;
-
 private List<HashMap<String, Object>> deviceInfo = null;
-
+private Button rightAdd,leftAdd,leftCut,rightCut,chooseCar;
 private UUID deviceUuid = null;
 private String devicename=null;
 private leftThread ti;
 private Message msg;
 private CustomListViewAdapter lvDevcieAdapter = null;
-private boolean mConnected = false,ruonTouch=true,luonTouch=true,rdonTouch=true,ldonTouch=true,senddate;
+private boolean mConnected = false,ruonTouch=true,luonTouch=true,rdonTouch=true,ldonTouch=true,sendDate;
 private SharedPreferences share;
 private SharedPreferences.Editor edit;
 private String du=null;
 private byte type=0x01;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);   
 		setContentView(R.layout.activity_main); 
-		
-		  share=MainActivity.this.getSharedPreferences("UUID", Activity.MODE_PRIVATE);
-	        edit=share.edit(); 
-	        if(share.getString("duuid", "")!=""){
-	        du=share.getString("duuid", "");
+		share=MainActivity.this.getSharedPreferences("UUID", Activity.MODE_PRIVATE);
+		edit=share.edit(); 
+		if(share.getString("duuid", "")!=""){
+			
+			du=share.getString("duuid", "");
 	        devicename=share.getString("nmname", "");
-	        }
-	        ti=new leftThread();
-	 	   ti.start();
+	        
+		}
+		ti=new leftThread();
+	 	ti.start();
 		initView();
 		initDevice();
 	}
 	
 	 private void initView(){
 
-			choosecar = (Button) findViewById(R.id.bt5);
-			leftadd = (Button) findViewById(R.id.bt1);
-			leftcut = (Button) findViewById(R.id.bt3);
-			rightadd= (Button) findViewById(R.id.bt2);
-			rightcut = (Button) findViewById(R.id.bt4);  
+			chooseCar = (Button) findViewById(R.id.bt5);
+			leftAdd = (Button) findViewById(R.id.bt1);
+			leftCut = (Button) findViewById(R.id.bt3);
+			rightAdd= (Button) findViewById(R.id.bt2);
+			rightCut = (Button) findViewById(R.id.bt4);  
 
 		}
 	 private void initDevice(){
@@ -115,7 +107,6 @@ private byte type=0x01;
 
 				@Override
 				public void onConnect(UUID uuid, int status) {
-					// TODO Auto-generated method stub
 					if(status==JumaDevice.STATE_SUCCESS){
 						Intent intent = new Intent(MainActivity.ACTION_CONNECTED);
 						sendBroadcast(MainActivity.this, intent);
@@ -124,7 +115,6 @@ private byte type=0x01;
 
 				@Override
 				public void onDisconnect(UUID uuid, int status) {
-					// TODO Auto-generated method stub
 					Intent intent = new Intent(MainActivity.ACTION_DISCONNECTED);
 					sendBroadcast(MainActivity.this, intent);
 					
@@ -132,7 +122,6 @@ private byte type=0x01;
 
 				@Override
 				public void onDiscover(String name, UUID uuid, int rssi) {
-					// TODO Auto-generated method stub
 					Intent intent = new Intent(MainActivity.ACTION_DEVICE_DISCOVERED);
 					intent.putExtra(MainActivity.NAME_STR, name);
 					intent.putExtra(MainActivity.UUID_STR, uuid.toString());
@@ -142,33 +131,28 @@ private byte type=0x01;
 
 				@Override
 				public void onError(Exception e, int status) {
-					// TODO Auto-generated method stub
 					
 				}
 
 				@Override
 				public void onMessage(byte type, byte[] message) {
-					// TODO Auto-generated method stub
 					
 				}
 
 				@Override
 				public void onSend(int status) {
-					// TODO Auto-generated method stub
 					if(status==JumaDevice.STATE_SUCCESS){
-						senddate=false;
+						sendDate=false;
 					}
 				}
 
 				@Override
 				public void onStopScan() {
-					// TODO Auto-generated method stub
 					
 				}
 
 				@Override
 				public void onUpdateFirmware(int arg0) {
-					// TODO Auto-generated method stub
 					
 				}
 			};
@@ -184,9 +168,7 @@ private byte type=0x01;
 				map.put(NAME_STR, name);
 				map.put(UUID_STR, uuid);
 				map.put(RSSI_STR, rssi);
-
 				deviceInfo.add(map);
-
 				lvDevcieAdapter.notifyDataSetChanged();
 
 			}
@@ -198,7 +180,6 @@ private byte type=0x01;
 			public void onReceive(final Context context, final Intent intent) {
 
 				String action = intent.getAction();
-
 				if(action.equals(ACTION_DEVICE_DISCOVERED)){
 					runOnUiThread(new Runnable() {
 
@@ -208,8 +189,8 @@ private byte type=0x01;
 							String uuid = intent.getStringExtra(MainActivity.UUID_STR);
 							String name = intent.getStringExtra(MainActivity.NAME_STR);
 							int rssi = intent.getIntExtra(MainActivity.RSSI_STR, 0);
-
 							addDeviceInfo(name, uuid, rssi);
+							
 						}
 					});
 				}
@@ -219,8 +200,8 @@ private byte type=0x01;
 						@Override
 						public void run() {
 							mConnected=true;
-                            choosecar.setText(""+devicename);
-                           
+                            chooseCar.setText(""+devicename);
+                            
 						}
 					});
 				}
@@ -230,17 +211,16 @@ private byte type=0x01;
 						@Override
 						public void run() {
 							mConnected=false;
-                            choosecar.setText("Car");
-   						 Toast.makeText(getApplicationContext(), "已断开", Toast.LENGTH_LONG).show();
+							chooseCar.setText("Car");
+							Toast.makeText(getApplicationContext(), "已断开", Toast.LENGTH_LONG).show();
 						}
 					});
 				}
-				
-				
 			}
 		};
 
 		private IntentFilter getIntentFilter(){
+			
 			IntentFilter filter = new IntentFilter();
 			filter.addAction(MainActivity.ACTION_DEVICE_DISCOVERED);
 			filter.addAction(MainActivity.ACTION_CONNECTED);
@@ -249,6 +229,7 @@ private byte type=0x01;
 		}
 		@SuppressLint("DefaultLocale")
 		public static String byteToHex(byte[] b) {  
+			
 			StringBuffer hexString = new StringBuffer();  
 			for (int i = 0; i < b.length; i++) {  
 				String hex = Integer.toHexString(b[i] & 0xFF);  
@@ -261,6 +242,7 @@ private byte type=0x01;
 		}
 		@SuppressLint("UseValueOf")
 		public static final byte[] hexToByte(String hex)throws IllegalArgumentException {
+			
 			if (hex.length() % 2 != 0) {
 				throw new IllegalArgumentException();
 			}
@@ -284,9 +266,7 @@ private byte type=0x01;
 		  
 		          mHandler = new Handler() {   
 		              public void handleMessage(Message msg) {  
-		            	  Log.e("msg", ""+msg.what);
-		                  // process incoming messages here  
-		            	  senddate=true;
+		            	  sendDate=true;
 		            	  switch(msg.what)  
 		                  {  
 		                  case 1:  
@@ -306,280 +286,242 @@ private byte type=0x01;
 		                	  break; 
 		                  case 14:
 		                	  device.send(type,hexToByte("14"));
-		                  }  
-		            	
-		            	  while(senddate){
-		            		  
+		                	  break;
+		                  } 
+		            	  while(sendDate){  
 		            	  }
-
 		              }   
 		          };   
-		  
 		          Looper.loop();   
 		      }   
-
 		 }
 	 @Override
 	    protected void onStart() {
 	        super.onStart();
-	        Log.e("5", "");
+	        
 	     	Toast.makeText(this, "start", Toast.LENGTH_SHORT).show();
 	     LocalBroadcastManager.getInstance(this).registerReceiver(receiver, getIntentFilter());
+	     
 	     }
 private void ButtonOn(){
-	 choosecar.setOnClickListener(new OnClickListener(){
+	 chooseCar.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				if(mConnected==false){
-				if(du==null){
-				CustomDialog scanDialog = new CustomDialog(MainActivity.this, CustomDialog.DIALOG_TYPE_SCAN);
-				scanDialog.setScanCallback(new ScanCallback() {
-
-					@Override
-					public void onName(String name) {
-
-						device.scan(name);
-
-					}
-
-					@Override
-					public void onDevice(final UUID uuid, final String name) {
-
-						deviceUuid = uuid;
-						devicename=name;
-						 edit.putString("nmname", name);
-						  edit.putString("duuid", deviceUuid.toString());
-	                       edit.commit(); 
-						runOnUiThread(new Runnable() {
-
+					if(du==null){
+						CustomDialog scanDialog = new CustomDialog(MainActivity.this, CustomDialog.DIALOG_TYPE_SCAN);
+						scanDialog.setScanCallback(new ScanCallback() {
+							
 							@Override
-							public void run() {
-								device.connect(deviceUuid);	
+							public void onName(String name) {
+								
+								device.scan(name);
+								
+							}
+							
+							@Override
+							public void onDevice(final UUID uuid, final String name) {
+								
+								deviceUuid = uuid;
+								devicename=name;
+								edit.putString("nmname", name);
+								edit.putString("duuid", deviceUuid.toString());
+								edit.commit(); 
+								runOnUiThread(new Runnable() {
+									
+									@Override
+									public void run() {
+										
+										device.connect(deviceUuid);	
+										
+									}	
+								});
 							}
 						});
-
+						
+						scanDialog.show();
+						
+					}else{
+						device.connect(UUID.fromString(du));
 					}
-				
-				});
-			    scanDialog.show();
-			}
-				else{
-					device.connect(UUID.fromString(du));
-					
-				}
-				}
-				else{
-					
-						 Toast.makeText(getApplicationContext(), "已连接", Toast.LENGTH_LONG).show();	
+				}else{
+					Toast.makeText(getApplicationContext(), "已连接", Toast.LENGTH_LONG).show();
 				}
 			}});
-     choosecar.setOnLongClickListener(new OnLongClickListener(){
-
-			@Override
-			public boolean onLongClick(View v) {
-				// TODO Auto-generated method stub
-				CustomDialog scanDialog = new CustomDialog(MainActivity.this, CustomDialog.DIALOG_TYPE_SCAN);
-				scanDialog.setScanCallback(new ScanCallback() {
-
-					@Override
-					public void onName(String name) {
-
-						device.scan(name);
-
-					}
-
-					@Override
-					public void onDevice(final UUID uuid, final String name) {
-
-						deviceUuid = uuid;
-						devicename=name;
-						 edit.putString("nmname", name);
-						  edit.putString("duuid", deviceUuid.toString());
-	                       edit.commit(); 
-						runOnUiThread(new Runnable() {
-
-							@Override
-							public void run() {
-								device.connect(deviceUuid);	
-							}
-						});
-
-					}
+	 
+     chooseCar.setOnLongClickListener(new OnLongClickListener(){
+    	 
+    	 @Override
+    	 public boolean onLongClick(View v) {
+    		 CustomDialog scanDialog = new CustomDialog(MainActivity.this, CustomDialog.DIALOG_TYPE_SCAN);
+			scanDialog.setScanCallback(new ScanCallback() {
 				
-				});
-			    scanDialog.show();
-				return false;
-			}});
-     leftadd.setOnTouchListener(new OnTouchListener() {  
-     	 @Override
-     	    public boolean onTouch(View v, MotionEvent event) {
-     		if(luonTouch==true){
-     		 int ea = event.getAction();      
-              switch (ea) {     
-              case MotionEvent.ACTION_DOWN:  
-             	 ldonTouch=false;
-              msg=new Message();
-             	msg.what=2;
-             	ti.mHandler.sendMessage(msg);
-             	 
-                  break;     
-              case MotionEvent.ACTION_MOVE:     
-             	
-                  break;                    
-                  case MotionEvent.ACTION_UP:  
-                		 msg=new Message();
-                     	msg.what=14;
-                     	ti.mHandler.sendMessage(msg);
-                 	
-                 	 ldonTouch=true;
-                 break;     
-     	        }}
+				@Override
+				public void onName(String name) {
+					
+					device.scan(name);
+					
+				}
+				
+				@Override
+				public void onDevice(final UUID uuid, final String name) {
+					
+					deviceUuid = uuid;
+					devicename=name;
+					edit.putString("nmname", name);
+					edit.putString("duuid", deviceUuid.toString());
+	                edit.commit(); 
+					runOnUiThread(new Runnable() {
+						
+						@Override
+						public void run() {
+							device.connect(deviceUuid);	
+						}
+					});
+				}
+			});
+			scanDialog.show();
+			return false;
+		}});
+     
+     leftAdd.setOnTouchListener(new OnTouchListener() {
+    	 
+    	 @Override
+    	 public boolean onTouch(View v, MotionEvent event) {
+    		 
+    		 if(luonTouch==true){
+    			 int ea = event.getAction();
+    			 switch (ea) {
+    			 case MotionEvent.ACTION_DOWN:
+    				 ldonTouch=false;
+    				 msg=new Message();
+    				 msg.what=2;
+    				 ti.mHandler.sendMessage(msg);
+    				 break;
+    			 case MotionEvent.ACTION_UP: 
+    				 msg=new Message();
+    				 msg.what=14;
+    				 ti.mHandler.sendMessage(msg);
+    				 ldonTouch=true;
+    				 break;
+    			 }}
      	        return false;
-     	    }
-     	});
- 
-    
-  
-
-
-
-     rightadd.setOnTouchListener(new OnTouchListener() {
-
-			@Override
-			public boolean onTouch(View v, MotionEvent event) {
-				
-					if(ruonTouch==true){
-						
-				int ea = event.getAction();      
-         switch (ea) {     
-         case MotionEvent.ACTION_DOWN: 
-         	rdonTouch=false;
-         	 msg=new Message();
-          	msg.what=1;
-          	ti.mHandler.sendMessage(msg);
-        
-             break;     
-         case MotionEvent.ACTION_MOVE:       
-             break;                    
-         case MotionEvent.ACTION_UP:  
-        	 msg=new Message();
-          	msg.what=11;
-          	ti.mHandler.sendMessage(msg);
-         	
-         	rdonTouch=true;
-        
-            break;     
-	        }}
-				
-	        return false;
-	    }
-	});
-     leftcut.setOnTouchListener(new OnTouchListener() {
-
-			@Override
-			public boolean onTouch(View v, MotionEvent event) { 
-				
-					if(ldonTouch==true){
-						
-					
-				int ea = event.getAction();      
-         switch (ea) {     
-         case MotionEvent.ACTION_DOWN:  
-         	luonTouch=false;
-         	 msg=new Message();
-           	msg.what=4;
-           	ti.mHandler.sendMessage(msg);
-             break;     
-         case MotionEvent.ACTION_MOVE:       
-             break;                    
-         case MotionEvent.ACTION_UP:  
-        	 msg=new Message();
-           	msg.what=14;
-           	ti.mHandler.sendMessage(msg);
-         	luonTouch=true;
-            break;     
-	        }}
-       
-	        return false;
-	    }
-	});
-     rightcut.setOnTouchListener(new OnTouchListener() {
+     	 }
+    });
+     
+     rightAdd.setOnTouchListener(new OnTouchListener() {
+    	 
+    	 @Override
+    	 public boolean onTouch(View v, MotionEvent event) {
+    		 
+    		 if(ruonTouch==true){
+    			 int ea = event.getAction();
+    			 switch (ea) { 
+    			 case MotionEvent.ACTION_DOWN: 
+    				 rdonTouch=false;
+    				 msg=new Message();
+    				 msg.what=1;
+    				 ti.mHandler.sendMessage(msg);
+    				 break;                   
+                 case MotionEvent.ACTION_UP:  
+        	         msg=new Message();
+          	         msg.what=11;
+          	         ti.mHandler.sendMessage(msg);
+          	         rdonTouch=true;
+          	         break;
+          	     }}
+    		 return false;
+    	 }
+    });
+     
+     leftCut.setOnTouchListener(new OnTouchListener() {
+    	 
+    	 @Override
+		 public boolean onTouch(View v, MotionEvent event) { 
+    		 
+    		 if(ldonTouch==true){
+    			 int ea = event.getAction(); 
+    			 switch (ea) {     
+    			 case MotionEvent.ACTION_DOWN:  
+    				 luonTouch=false;
+    				 msg=new Message();
+    				 msg.what=4;
+    				 ti.mHandler.sendMessage(msg);
+    				 break;    
+    			 case MotionEvent.ACTION_UP: 
+    				 msg=new Message();
+    				 msg.what=14;
+    				 ti.mHandler.sendMessage(msg);
+    				 luonTouch=true;
+    				 break;  
+    			}}
+    		 return false;
+    	}
+    });
+     
+     rightCut.setOnTouchListener(new OnTouchListener() {
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-			
-					if(rdonTouch==true){
-						
-					
-				int ea = event.getAction();      
-         switch (ea) {     
-         case MotionEvent.ACTION_DOWN:   
-         	ruonTouch=false;
-         	 msg=new Message();
-           	msg.what=3;
-           	ti.mHandler.sendMessage(msg);
-             break;     
-         case MotionEvent.ACTION_MOVE:       
-             break;                    
-         case MotionEvent.ACTION_UP:  
-        	 msg=new Message();
-           	msg.what=11;
-           	ti.mHandler.sendMessage(msg);
-         	ruonTouch=true;
-            break;     
-	        }}
-	        return false;
-	    }
+				
+				if(rdonTouch==true){
+					int ea = event.getAction(); 
+					switch (ea) {    
+					case MotionEvent.ACTION_DOWN:   
+						ruonTouch=false;
+						msg=new Message();
+						msg.what=3;
+						ti.mHandler.sendMessage(msg);
+						break; 
+					case MotionEvent.ACTION_UP:  
+						msg=new Message();
+						msg.what=11;
+						ti.mHandler.sendMessage(msg);
+						ruonTouch=true;
+						break;
+					}}
+				return false;
+			}
 	});
-	
 }
-	 @SuppressLint("ClickableViewAccessibility")
+
+
+    @SuppressLint("ClickableViewAccessibility")
 	@Override
 	    protected void onResume() {
 	        super.onResume();
-	    ButtonOn();
-	       
-	  
+	        ButtonOn();
 	        
-	 }
+    }
 	 @Override
 		protected void onDestroy() {
 
 			super.onDestroy();
-			//device.disconnect(deviceUuid);
 			LocalBroadcastManager.getInstance(this).unregisterReceiver(receiver);
 			
 
 		}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
 		
+		int id = item.getItemId();
 		if (id == R.id.action_disconnect) {
 			if(mConnected==true){
 				if(du!=null){
-				device.disconnect(UUID.fromString(du));
-				
+					device.disconnect(UUID.fromString(du));
+				}else{
+					device.disconnect(deviceUuid);	
 				}
-				else{
-				device.disconnect(deviceUuid);	
-				}
-				}
+			}
 			return true;
 		}
-		
-		
 		return super.onOptionsItemSelected(item);
 	}
 }

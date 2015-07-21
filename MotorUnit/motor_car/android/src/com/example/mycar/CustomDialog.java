@@ -13,7 +13,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -29,62 +28,35 @@ public class CustomDialog extends Dialog implements android.view.View.OnClickLis
 	public static final int DIALOG_TYPE_SEND_MESSAGE = 2;
 
 	private EditText etInput = null;
-
 	private ListView lvDevice = null;
-
 	private Button positiveButton = null, negativeButton = null;
-
 	private Context context = null;
-
 	private int type = -1;
-
-	private MessageCallback messageCallback = null;
-
 	private ScanCallback scanCallback = null;
-
 	private CustomListViewAdapter lvDeviceAdapter = null;
-
 	private List<HashMap<String, Object>> deviceInfo = null;
-
-	private int id = -1;
 
 
 	public CustomDialog(Context context, int type) {
 		super(context);
-
+		
 		this.context = context;
-
 		this.type = type;
-
+		
 	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-
+		
 		Window win = getWindow();  
 		win.requestFeature(Window.FEATURE_NO_TITLE);
-		if(type == DIALOG_TYPE_SCAN)
+		if(type == DIALOG_TYPE_SCAN){
 			this.setContentView(R.layout.dialog_scan);
-		
-
+		}
 		initView();
-
+		
 	}
-
-	@Override
-	public void show() {
-		// TODO Auto-generated method stub
-		super.show();
-	}
-
-	@Override
-	public void dismiss() {
-		// TODO Auto-generated method stub
-		super.dismiss();
-	}
-
 	private void initView(){
 
 		if(type == DIALOG_TYPE_SCAN){
@@ -94,46 +66,32 @@ public class CustomDialog extends Dialog implements android.view.View.OnClickLis
 			negativeButton = (Button) findViewById(R.id.btnCancelScan);
 
 			deviceInfo = new ArrayList<HashMap<String,Object>>();
-
 			lvDeviceAdapter = new CustomListViewAdapter(context, deviceInfo);
-
 			lvDevice.setAdapter(lvDeviceAdapter);
-
 			lvDevice.setOnItemClickListener(this);
-//Log.e("info", ""+(String)deviceInfo.get(1).get("uuid"));
 		}
 
 		positiveButton.setOnClickListener(this);
-
 		negativeButton.setOnClickListener(this);
 
 	}
-
-	public void setMessageCallback(MessageCallback messageCallback){
-
-		this.messageCallback = messageCallback;
-
-	}
-
+	
 	public void setScanCallback(ScanCallback scanCallback){
 
 		this.scanCallback = scanCallback;
 
 	}
-
-	public void setId(int id){
-
-		this.id = id;
-
-	}
-
+	
 	@Override
 	protected void onStart() {
 		super.onStart();
+		
 		LocalBroadcastManager.getInstance(context).registerReceiver(receiver, getIntentFilter());
+		
 	}
 
 	private IntentFilter getIntentFilter(){
+		
 		IntentFilter filter = new IntentFilter();
 		filter.addAction(MainActivity.ACTION_DEVICE_DISCOVERED);
 		return filter;
@@ -142,7 +100,9 @@ public class CustomDialog extends Dialog implements android.view.View.OnClickLis
 	@Override
 	protected void onStop() {
 		super.onStop();
+		
 		LocalBroadcastManager.getInstance(context).unregisterReceiver(receiver);
+		
 	}
 
 
@@ -163,21 +123,15 @@ public class CustomDialog extends Dialog implements android.view.View.OnClickLis
 
 		switch (v.getId()) {
 		case R.id.btnStartScan:
-			
 			String name = etInput.getText().toString();
-
-			if(scanCallback != null)
+			if(scanCallback != null){
 				scanCallback.onName(name);
-
+			}
 			etInput.setText(""+name);
-		
 			break;
 		case R.id.btnCancelScan:
-
 			dismiss();
-
 			break;
-		
 		}
 
 	}
@@ -187,33 +141,33 @@ public class CustomDialog extends Dialog implements android.view.View.OnClickLis
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 
 		HashMap<String, Object> map = (HashMap<String, Object>) lvDeviceAdapter.getItem(arg2);
-
 		String name = (String) map.get(MainActivity.NAME_STR);
-
 		UUID uuid = UUID.fromString((String)map.get(MainActivity.UUID_STR));
-
-		if(scanCallback != null)
-			Log.e("uuidsc", ""+uuid.toString());
+		if(scanCallback != null){
 			scanCallback.onDevice(uuid, name);
-
+		}
 		dismiss();
 
 	}
 
 	public interface MessageCallback{
+		
 		void onMessage(byte[] message, int id);
+		
 	}
 
 	public interface ScanCallback{
+		
 		void onName(String name);
 		void onDevice(UUID uuid, String name);
+		
 	}
 
 	private BroadcastReceiver receiver = new BroadcastReceiver() {
 
 		@Override
 		public void onReceive(Context context, Intent intent) {
-			Log.e("+++++++", "");
+			
 			String uuid = intent.getStringExtra(MainActivity.UUID_STR);
 			String name = intent.getStringExtra(MainActivity.NAME_STR);
 			int rssi = intent.getIntExtra(MainActivity.RSSI_STR, 0);
@@ -225,13 +179,12 @@ public class CustomDialog extends Dialog implements android.view.View.OnClickLis
 	private void addDeviceInfo(String name, String uuid, int rssi){
 
 		if(deviceInfo != null && lvDeviceAdapter != null){
+			
 			HashMap<String , Object> map = new HashMap<String, Object>();
 			map.put(MainActivity.NAME_STR, name);
 			map.put(MainActivity.UUID_STR, uuid);
 			map.put(MainActivity.RSSI_STR, rssi);
-
 			deviceInfo.add(map);
-
 			lvDeviceAdapter.notifyDataSetChanged();
 
 		}
@@ -240,6 +193,7 @@ public class CustomDialog extends Dialog implements android.view.View.OnClickLis
 
 	@SuppressLint("UseValueOf")
 	public static final byte[] hexToByte(String hex)throws IllegalArgumentException {
+		
 		if (hex.length() % 2 != 0) {
 			throw new IllegalArgumentException();
 		}
@@ -250,6 +204,7 @@ public class CustomDialog extends Dialog implements android.view.View.OnClickLis
 			int byteint = Integer.parseInt(swap, 16) & 0xFF;
 			b[j] = new Integer(byteint).byteValue();
 		}
+		
 		return b;
 	}
 
