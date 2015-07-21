@@ -45,6 +45,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
+	
 	public static final String ACTION_DEVICE_DISCOVERED = "com.juma.demo.ACTION_DEVICE_DISCOVERED";
     public static final String NAME_STR = "name";
     public static final String UUID_STR = "uuid";
@@ -175,7 +176,7 @@ public class MainActivity extends Activity {
     			
     			if (status == JumaDevice.STATE_SUCCESS) {
     				
-    					device.send(type, hexToByte((senddate==1)?"01":"00"));
+    				device.send(type, hexToByte((senddate==1)?"01":"00"));
     			
     			}else if (status == JumaDevice.STATE_ERROR ) {
     				
