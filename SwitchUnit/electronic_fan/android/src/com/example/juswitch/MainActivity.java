@@ -50,8 +50,6 @@ public class MainActivity extends Activity {
     public static final String NAME_STR = "name";
     public static final String UUID_STR = "uuid";
     public static final String RSSI_STR = "rssi";
-    public static final String MESSAGE_STR = "message";
-    public static final String ERROR_STR = "error";
 
     private Button btChoose;
     private Switch swSwitch;
