@@ -16,7 +16,6 @@
 
 #define SWITCH_PIN 28
 
-
 void ble_device_on_message(uint8_t type, uint16_t length, uint8_t* value)
 {
 	switch(value[0])
@@ -36,19 +35,16 @@ void ble_device_on_message(uint8_t type, uint16_t length, uint8_t* value)
 void ble_device_on_disconnect(uint8_t reason)
 {
 	ble_device_set_advertising_interval(200);
-  ble_device_start_advertising();
+	ble_device_start_advertising();
 }
-
-
 
 void on_ready()
 {
-  ble_device_set_name("NovaFan");
+	ble_device_set_name("NovaFan");
 	ble_device_set_advertising_interval(200);
-  ble_device_start_advertising();
+	ble_device_start_advertising();
 	
 	gpio_setup(SWITCH_PIN, GPIO_OUTPUT);
-
 }
 
 

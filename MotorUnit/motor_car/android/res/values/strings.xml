@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CarTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_disconnect">Disconnect</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="mo_car">Car</string>
+    <string name="mo_up">UP</string>
+    <string name="mo_down">Down</string>
+    <string name="mo_choose">Choose:</string>
+    <string name="mo_mo">Motor</string>
+    <string name="mo_left">Left Motor</string>
+    <string name="mo_right">Right Motor</string>
+
+</resources>
