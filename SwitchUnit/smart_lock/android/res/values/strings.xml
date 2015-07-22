@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Switch</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="sw_switch">Switch</string>
+    <string name="sw_choose">Choose:</string>
+    <string name="sw_none">None</string>
+    <string name="sw_on">ON</string>
+    <string name="sw_off">OFF</string>
+    <string name="dl_select">select_device</string>
+    <string name="dl_enter">Please enter message</string>
+    <string name="dl_start">Start</string>
+    <string name="dl_cancel">Cancel</string>
+
+</resources>
