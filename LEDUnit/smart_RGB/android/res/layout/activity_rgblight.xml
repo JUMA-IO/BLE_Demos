@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.example.lightrgb.RGBlight"
+    >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:text="RGBLight"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+         android:background="#000000" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="Choose："
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/rgb_choose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" 
+            android:textColor="#ffffff"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+         android:background="#000000">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="R:" 
+            android:textColor="#ffffff"/>
+
+        <EditText
+            android:id="@+id/rgb_r"
+             android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="255"
+            android:inputType="number"
+            android:textColor="#ffffff" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+             android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="G:" 
+            android:textColor="#ffffff"/>
+
+        <EditText
+            android:id="@+id/rgb_g"
+             android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:ems="10"
+             android:text="255"
+            android:inputType="number" 
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="B:"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:id="@+id/rgb_b"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:ems="10"
+             android:text="255"
+            android:inputType="number" 
+            android:textColor="#ffffff"/>
+
+    </TableRow>
+
+    <TableRow
+         android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/rgb_off"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="OFF"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/rgb_set"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Set" 
+            android:textColor="#ffffff" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/info_back">
+       
+        <com.example.lightrgb.ColorPicker
+            android:id="@+id/colorPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+     
+
+    </TableRow>
+  
+    </LinearLayout>
