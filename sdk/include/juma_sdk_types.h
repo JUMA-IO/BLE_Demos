@@ -39,9 +39,24 @@ enum {
     GPIO_FALLING,
 };
 
-enum {
-    UART_BAUD_9600 = 1,
-};
+/* UART baudrate. */
+#define UART_BAUDRATE_Baud1200    (0x0004F000UL) /*!< 1200 baud. */
+#define UART_BAUDRATE_Baud2400    (0x0009D000UL) /*!< 2400 baud. */
+#define UART_BAUDRATE_Baud4800    (0x0013B000UL) /*!< 4800 baud. */
+#define UART_BAUDRATE_Baud9600    (0x00275000UL) /*!< 9600 baud. */
+#define UART_BAUDRATE_Baud14400   (0x003B0000UL) /*!< 14400 baud. */
+#define UART_BAUDRATE_Baud19200   (0x004EA000UL) /*!< 19200 baud. */
+#define UART_BAUDRATE_Baud28800   (0x0075F000UL) /*!< 28800 baud. */
+#define UART_BAUDRATE_Baud38400   (0x009D5000UL) /*!< 38400 baud. */
+#define UART_BAUDRATE_Baud57600   (0x00EBF000UL) /*!< 57600 baud. */
+#define UART_BAUDRATE_Baud76800   (0x013A9000UL) /*!< 76800 baud. */
+#define UART_BAUDRATE_Baud115200  (0x01D7E000UL) /*!< 115200 baud. */
+#define UART_BAUDRATE_Baud230400  (0x03AFB000UL) /*!< 230400 baud. */
+#define UART_BAUDRATE_Baud250000  (0x04000000UL) /*!< 250000 baud. */
+#define UART_BAUDRATE_Baud460800  (0x075F7000UL) /*!< 460800 baud. */
+#define UART_BAUDRATE_Baud921600  (0x0EBED000UL) /*!< 921600 baud. */
+#define UART_BAUDRATE_Baud1M      (0x10000000UL) /*!< 1M baud. */
+
 
 enum {
     UART_8N1 = 1,
@@ -57,6 +72,12 @@ enum {
     GFX_SET_BLACK,
     GFX_SET_WHITE,
     GFX_INVERT,
+};
+
+//Timer TYPE
+enum{
+  TIMER_ONECE,
+  TIMER_PERIODIC,
 };
 
 #define GFX_BLACK_IS_1   0x01
@@ -85,5 +106,62 @@ typedef struct {
 	char start_char;
 	char end_char;
 } gfx_font_t;
+
+
+//////////////////ble infrared////////////////////////////////
+typedef struct ble_infrared_pwm_config_struct_
+{
+	uint8_t infrared_signal_pin;          //pin num for infrared signal pin
+	uint8_t infrared_shock_pin;           //pin num for shock signal pin
+	
+	//carrier
+	uint16_t carrier_period;              //the time value of carrier period
+	uint16_t carrier_plus;	              //the time value of carrier hight time
+                
+	//guidance              
+	uint16_t guidance_burst;              //the carrier period number of guidance burst
+	uint16_t guidance_space;              //the carrier period number of guidance space
+                
+	//logic 0             
+	uint16_t logic_0_burst;	              //the carrier period number of logic 0 sending burst
+	uint16_t logic_0_space;	              //the carrier period number of logic 0 sending space
+                
+	//logic 1             
+	uint16_t logic_1_burst;	              //the carrier period number of logic 1 sending burst
+	uint16_t logic_1_space;	              //the carrier period number of logic 1 sending space
+	
+	//end
+	uint16_t end_burst;                   //the carrier period number of end gap burst 
+	
+}ble_infrared_pwm_config_struct;
+
+typedef enum
+{
+  PWM_HEAD_END = 0			
+}infraredProtocal;
+
+typedef struct ble_infrared_init_struct_
+{
+  infraredProtocal Protocal_type;
+	
+  union {
+    ble_infrared_pwm_config_struct pwm;
+  }type_data;
+	
+}ble_infrared_init_struct;
+
+
+////////////////////////////WatchDog////////////////////////////////////////
+#define JUMA_WDT_EN_USER_DOG1   0x01
+#define JUMA_WDT_EN_USER_DOG2   0x02
+#define JUMA_WDT_EN_USER_DOG3   0x04
+#define JUMA_WDT_EN_USER_DOG4   0x08
+              
+#define JUMA_WDT_EN_SYS_SDK_DOG 0x80
+
+#define JUMA_WDT_USER_DOG1      0x01
+#define JUMA_WDT_USER_DOG2      0x02  
+#define JUMA_WDT_USER_DOG3      0x04
+#define JUMA_WDT_USER_DOG4      0x08
 
 #endif //_PSM_TYPES_H_
