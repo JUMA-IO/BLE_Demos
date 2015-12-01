@@ -1,0 +1,32 @@
+
+T0F64 000:502 SEGGER J-Link V4.80g Log File (0000ms, 0263ms total)
+T0F64 000:502 DLL Compiled: Feb 13 2014 20:50:02 (0000ms, 0263ms total)
+T0F64 000:502 Logging started @ 2015-09-22 10:12 (0000ms, 0263ms total)
+T0F64 000:502 JLINK_SetWarnOutHandler(...) (0000ms, 0263ms total)
+T0F64 000:502 JLINK_OpenEx(...)
+Firmware: J-Link ARM-OB STM32 compiled Aug 22 2012 19:52:04
+Hardware: V7.00
+S/N: 20150565
+Feature(s): RDI,FlashDL,FlashBP,JFlash,GDBFull  returns O.K. (0262ms, 0525ms total)
+T0F64 000:764 JLINK_SetErrorOutHandler(...) (0000ms, 0525ms total)
+T0F64 000:764 JLINK_ExecCommand("ProjectFile = "D:\Work\CODE\ST\ST_SDK\Projects\Multi\Application\BleInterface\MDK-ARM\JLinkSettings.ini"", ...)Device "STM32F401RC" selected (0 KB flash, 64 KB RAM).  returns 0x00 (0002ms, 0527ms total)
+T0F64 000:766 JLINK_ExecCommand("Device = STM32F401RETx", ...)Device "STM32F401RC" selected (0 KB flash, 64 KB RAM).  returns 0x00 (0000ms, 0527ms total)
+T0F64 000:766 JLINK_ExecCommand("DisableConnectionTimeout", ...)  returns 0x01 (0000ms, 0527ms total)
+T0F64 000:766 JLINK_GetHardwareVersion()  returns 0x11170 (0000ms, 0527ms total)
+T0F64 000:766 JLINK_GetDLLVersion()  returns 48007 (0000ms, 0527ms total)
+T0F64 000:766 JLINK_GetFirmwareString(...) (0000ms, 0527ms total)
+T0F64 000:767 JLINK_GetDLLVersion()  returns 48007 (0000ms, 0527ms total)
+T0F64 000:767 JLINK_GetCompileDateTime() (0000ms, 0527ms total)
+T0F64 000:767 JLINK_GetFirmwareString(...) (0000ms, 0527ms total)
+T0F64 000:767 JLINK_GetHardwareVersion()  returns 0x11170 (0000ms, 0527ms total)
+T0F64 000:767 JLINK_TIF_Select(JLINKARM_TIF_SWD)  returns 0x00 (0001ms, 0528ms total)
+T0F64 000:768 JLINK_SetSpeed(2000) (0000ms, 0528ms total)
+T0F64 000:768 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)  returns JLINKARM_RESET_TYPE_NORMAL (0000ms, 0528ms total)
+T0F64 000:768 JLINK_Reset() >0x108 TIF> >0x108 TIF>STM32F2xxx/STM32F4xxx: Can not attach to CPU. Trying connect under reset. >0x108 TIF> >0x108 TIF>JLINK_GetId() >0x108 TIF> >0x108 TIF>STM32F2xxx/STM32F4xxx: Can not attach to CPU. Trying connect under reset. >0x108 TIF> >0x108 TIF>  returns 0x00000000 (0506ms, 1543ms total)
+T0F64 001:783 JLINK_GetId() >0x108 TIF> >0x108 TIF>STM32F2xxx/STM32F4xxx: Can not attach to CPU. Trying connect under reset. >0x108 TIF> >0x108 TIF>  returns 0x00000000 (0507ms, 2050ms total)
+T0F64 002:290 JLINK_GetFirmwareString(...) (0000ms, 2050ms total)
+T1004 002:290 
+  ***** Error: Connection to emulator lost! (6694ms, 8744ms total)
+T0F64 012:270 JLINK_Close() (0000ms, 2050ms total)
+T0F64 012:270  (0000ms, 2050ms total)
+T0F64 012:270 Closed (0000ms, 2050ms total)
