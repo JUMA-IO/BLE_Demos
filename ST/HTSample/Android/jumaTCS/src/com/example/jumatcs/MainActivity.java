@@ -208,23 +208,22 @@ public class MainActivity extends Activity {
 		}
 		}	
 	}
-	
 	@Override
-		public void onReciver(byte type, byte[] message) {
+		public void onReceive(byte type, byte[] message) {
 			// TODO Auto-generated method stub
-			super.onReciver(type, message);
+			super.onReceive(type, message);
 			if(wDevice.isConnected()){
-			if(cStop){
-				tDevice.disconnect();
-			}else {
-			if(type == (byte)0x00){
-				getValue(message,true);
-			}else if(type == (byte)0x01){
-				getValue(message,false);
+				if(cStop){
+					tDevice.disconnect();
+				}else {
+				if(type == (byte)0x00){
+					getValue(message,true);
+				}else if(type == (byte)0x01){
+					getValue(message,false);
+				}
 			}
 		}
-	}
-	}
+		}
 	};
 	 @Override
 	    protected void onStop() {
