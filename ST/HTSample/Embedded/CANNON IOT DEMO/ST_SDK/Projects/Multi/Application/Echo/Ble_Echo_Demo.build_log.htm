@@ -1,0 +1,176 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\Work\CODE\ST\ST_SDK\Projects\Multi\Application\Echo\Ble_Echo_Demo.uvproj
+Project File Date:  10/08/2015
+
+<h2>Output:</h2>
+Build target 'Blue_NRG_MS_F4xx_SDK'
+assembling startup_stm32f401xe.s...
+compiling bluenrg_interface.c...
+..\BleInterface\Src\bluenrg_interface.c(39): error:  #5: cannot open source input file "bluenrg_interface.h": No such file or directory
+  #include "bluenrg_interface.h"
+..\BleInterface\Src\bluenrg_interface.c: 0 warnings, 1 error
+compiling bluenrg_sdk_api.c...
+..\BleInterface\Src\bluenrg_sdk_api.c(2): error:  #5: cannot open source input file "bluenrg_sdk_api.h": No such file or directory
+  #include "bluenrg_sdk_api.h"
+..\BleInterface\Src\bluenrg_sdk_api.c: 0 warnings, 1 error
+compiling canon_hal_f4.c...
+..\BleInterface\Src\canon_hal_f4.c(3): error:  #5: cannot open source input file "canon_hal.h": No such file or directory
+  #include "canon_hal.h"
+..\BleInterface\Src\canon_hal_f4.c: 0 warnings, 1 error
+compiling clock.c...
+..\BleInterface\Src\clock.c(39): error:  #5: cannot open source input file "clock.h": No such file or directory
+  #include "clock.h"
+..\BleInterface\Src\clock.c: 0 warnings, 1 error
+compiling main.c...
+..\BleInterface\Src\main.c(42): error:  #5: cannot open source input file "canon_hal.h": No such file or directory
+  #include "canon_hal.h"
+..\BleInterface\Src\main.c: 0 warnings, 1 error
+compiling stm32xx_it.c...
+..\BleInterface\Src\stm32xx_it.c(41): error:  #5: cannot open source input file "stm32xx_it.h": No such file or directory
+  #include "stm32xx_it.h"
+..\BleInterface\Src\stm32xx_it.c: 0 warnings, 1 error
+compiling demo_echo.c...
+demo_echo.c(2): error:  #5: cannot open source input file "bluenrg_sdk_api.h": No such file or directory
+  #include "bluenrg_sdk_api.h"
+demo_echo.c: 0 warnings, 1 error
+compiling stm32f4xx_canon.c...
+..\..\..\..\Drivers\BSP\STM32F401RE\stm32f4xx_canon.h(11): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\BSP\STM32F401RE\stm32f4xx_canon.c: 0 warnings, 1 error
+compiling stm32_bluenrg_ble.c...
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.h(87): error:  #20: identifier "uint8_t" is undefined
+  uint8_t BlueNRG_DataPresent(void);
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.h(89): error:  #20: identifier "int32_t" is undefined
+  int32_t BlueNRG_SPI_Read_All(SPI_HandleTypeDef *hspi,
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.h(89): error:  #20: identifier "SPI_HandleTypeDef" is undefined
+  int32_t BlueNRG_SPI_Read_All(SPI_HandleTypeDef *hspi,
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.h(90): error:  #20: identifier "uint8_t" is undefined
+                               uint8_t *buffer,
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.h(91): error:  #20: identifier "uint8_t" is undefined
+                               uint8_t buff_size);
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.h(92): error:  #20: identifier "int32_t" is undefined
+  int32_t BlueNRG_SPI_Write(SPI_HandleTypeDef *hspi,
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.h(92): error:  #20: identifier "SPI_HandleTypeDef" is undefined
+  int32_t BlueNRG_SPI_Write(SPI_HandleTypeDef *hspi,
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.h(93): error:  #20: identifier "uint8_t" is undefined
+                            uint8_t* data1,
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.h(94): error:  #20: identifier "uint8_t" is undefined
+                            uint8_t* data2,
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.h(95): error:  #20: identifier "uint8_t" is undefined
+                            uint8_t Nb_bytes1,
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.h(96): error:  #20: identifier "uint8_t" is undefined
+                            uint8_t Nb_bytes2);
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.c(40): error:  #5: cannot open source input file "gp_timer.h": No such file or directory
+  #include "gp_timer.h"
+..\..\..\..\Drivers\BSP\BlueNRG_MS\stm32_bluenrg_ble.c: 0 warnings, 12 errors
+compiling system_stm32f4xx.c...
+..\BleInterface\Src\system_stm32f4xx.c(66): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\BleInterface\Src\system_stm32f4xx.c: 0 warnings, 1 error
+compiling stm32f4xx_hal.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c(54): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_adc.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc.c(195): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_adc_ex.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc_ex.c(117): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc_ex.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_cortex.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c(101): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_dma.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c(117): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_flash.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c(96): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_flash_ex.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c(81): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_gpio.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c(126): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_i2c.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c.c(184): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_i2c_ex.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c_ex.c(61): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c_ex.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_i2s.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2s.c(140): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2s.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_i2s_ex.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2s_ex.c(105): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2s_ex.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_pwr.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c(44): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_pwr_ex.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c(43): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_rcc.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c(89): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_rcc_ex.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c(43): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c: 0 warnings, 1 error
+compiling stm32f4xx_hal_spi.c...
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c(90): error:  #5: cannot open source input file "stm32f4xx_hal.h": No such file or directory
+  #include "stm32f4xx_hal.h"
+..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c: 0 warnings, 1 error
+compiling hci.c...
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\hci\hci.c(19): error:  #5: cannot open source input file "hal_types.h": No such file or directory
+  #include "hal_types.h"
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\hci\hci.c: 0 warnings, 1 error
+compiling bluenrg_gap_aci.c...
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\hci\controller\bluenrg_gap_aci.c(16): error:  #5: cannot open source input file "hal_types.h": No such file or directory
+  #include "hal_types.h"
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\hci\controller\bluenrg_gap_aci.c: 0 warnings, 1 error
+compiling bluenrg_gatt_aci.c...
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\hci\controller\bluenrg_gatt_aci.c(16): error:  #5: cannot open source input file "hal_types.h": No such file or directory
+  #include "hal_types.h"
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\hci\controller\bluenrg_gatt_aci.c: 0 warnings, 1 error
+compiling bluenrg_hal_aci.c...
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\hci\controller\bluenrg_hal_aci.c(16): error:  #5: cannot open source input file "hal_types.h": No such file or directory
+  #include "hal_types.h"
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\hci\controller\bluenrg_hal_aci.c: 0 warnings, 1 error
+compiling bluenrg_l2cap_aci.c...
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\hci\controller\bluenrg_l2cap_aci.c(16): error:  #5: cannot open source input file "hal_types.h": No such file or directory
+  #include "hal_types.h"
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\hci\controller\bluenrg_l2cap_aci.c: 0 warnings, 1 error
+compiling bluenrg_itf_template.c...
+compiling gp_timer.c...
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\utils\gp_timer.c(35): error:  #5: cannot open source input file "clock.h": No such file or directory
+  #include "clock.h"
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\utils\gp_timer.c: 0 warnings, 1 error
+compiling list.c...
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\utils\list.c(19): error:  #5: cannot open source input file "hal_types.h": No such file or directory
+  #include <hal_types.h>
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\utils\list.c: 0 warnings, 1 error
+compiling osal.c...
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\utils\osal.c(41): error:  #5: cannot open source input file "osal.h": No such file or directory
+  #include <osal.h>
+..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\utils\osal.c: 0 warnings, 1 error
+".\Ble_Echo_Demo.axf" - 46 Error(s), 0 Warning(s).
+Target not created
