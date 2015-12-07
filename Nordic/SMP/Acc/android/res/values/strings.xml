@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MotionSensor</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="oncheck_1">OnCheck_1</string>
+    <string name="offcheck">OffCheck</string>
+    <string name="oncheck_2">OnCheck_2</string>
+    <string name="choose">Choose:</string>
+    
+</resources>
