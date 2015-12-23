@@ -53,7 +53,7 @@ void on_ready( )
 	
   //uint8_t rgb_pin[4] = {7, 6, 5};
   //uint8_t rgb_pin[4] = {23, 21, 22};
- uint8_t rgb_pin[4] = {12, 11, 29};
+  uint8_t rgb_pin[4] = {12, 11, 29};
   light_setup(rgb_pin, 1);
   
   light_off();

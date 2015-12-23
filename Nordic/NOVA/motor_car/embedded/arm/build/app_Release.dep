@@ -1,0 +1,9 @@
+Dependencies for Project 'app', Target 'Release': (DO NOT MODIFY !)
+F (..\app.c)(0x567385E1)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork -I..\sdk\include -I..\..\..\Driver\LS013B7DH03\lib-I F:\Nordic\NOVA\motor_car\embedded\arm\RTE-I C:\nigel\software\keil_mdk514\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\nigel\software\keil_mdk514\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\7.2.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51-o .\build\app.o --omf_browse .\build\app.crf --depend .\build\app.d)
+I (..\sdk\include\juma_sdk_api.h)(0x565D9F42)
+I (..\sdk\include\juma_sdk_types.h)(0x565D9F42)
+I (C:\nigel\software\keil_mdk514\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (C:\nigel\software\keil_mdk514\ARM\ARMCC\include\stdint.h)(0x5475F300)
+I (C:\nigel\software\keil_mdk514\ARM\ARMCC\include\stdlib.h)(0x5475F300)
+I (C:\nigel\software\keil_mdk514\ARM\ARMCC\include\string.h)(0x5475F300)
+F (..\sdk\lib\juma_sdk.lib)(0x565D9F42)()
