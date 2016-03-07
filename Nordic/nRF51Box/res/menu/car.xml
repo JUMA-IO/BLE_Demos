@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+   <item
+        android:id="@+id/start_GSensor"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/start_GSensor"/>
+    <item
+        android:id="@+id/stop_GSensor"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/stop_GSensor"/>
+
+</menu>
