@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,7 +50,6 @@ public class DeviceFragment extends Fragment
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Log.i(TAG, "onCreateView");
         scene = getContext().getSharedPreferences("scene", Activity.MODE_PRIVATE);
         edit = scene.edit();
         View v =  inflater.inflate(R.layout.activity_fragment, container, false);
@@ -234,7 +232,6 @@ public class DeviceFragment extends Fragment
     }
     @Override
     public void onStart() {
-        Log.i(TAG, "onStart");
         super.onStart();
         switchList.clear();
         oneTime = true;
@@ -324,7 +321,6 @@ public class DeviceFragment extends Fragment
     };
     @Override
     public void onStop() {
-        Log.i(TAG, "onStop");
         super.onStop();
         LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(receiver);
     }
@@ -386,7 +382,6 @@ public class DeviceFragment extends Fragment
 
     @Override
     public void onDestroy() {
-        Log.i(TAG, "onDestroy");
         super.onDestroy();
     }
 

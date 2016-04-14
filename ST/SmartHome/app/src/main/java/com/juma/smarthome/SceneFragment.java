@@ -9,7 +9,6 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -97,7 +96,6 @@ public class SceneFragment extends Fragment implements SlideView.OnSlideListener
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        Log.e("aaaaaaaaaa",""+isVisibleToUser);
         if (isVisibleToUser && myAdapter!=null) {
             myAdapter.clear();
             myAdapter.addAll(mMessageItems);
@@ -234,7 +232,7 @@ public class SceneFragment extends Fragment implements SlideView.OnSlideListener
     public class btDelet implements View.OnClickListener {
         int mPosition;
         public btDelet(int position){
-            mPosition = position+1;
+            mPosition = position;
         }
         @Override
         public void onClick(View v) {
@@ -263,7 +261,7 @@ public class SceneFragment extends Fragment implements SlideView.OnSlideListener
                     n--;
                     edit.putString("n", "" + n);
                     edit.commit();
-                    mMessageItems.remove(n + 1);
+                    mMessageItems.remove(mPosition);
                     myAdapter.clear();
                     switchList.clear();
                     myAdapter.addAll(mMessageItems);
@@ -277,6 +275,7 @@ public class SceneFragment extends Fragment implements SlideView.OnSlideListener
             bCancel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    mMessageItems.get(mPosition).slideView.shrink();
                     dialog.cancel();
                 }
             });
@@ -322,6 +321,7 @@ public class SceneFragment extends Fragment implements SlideView.OnSlideListener
             bCancel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    mMessageItems.get(mPosition).slideView.shrink();
                     dialog.cancel();
                 }
             });

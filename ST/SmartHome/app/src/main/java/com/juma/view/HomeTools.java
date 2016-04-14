@@ -16,8 +16,6 @@ import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import com.juma.view.SlideView;
-
 public class HomeTools
 {
     public static final String ACTION_START_SCAN = "com.juma.smarthome.ACTION_START_SCAN";
