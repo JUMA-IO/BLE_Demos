@@ -75,7 +75,7 @@ public class SlideView extends LinearLayout {
         mOnSlideListener = onSlideListener;
     }
 
-    public void shrink1() {
+    public void shrink() {
         if (getScrollX() != 0) {
             this.smoothScrollTo(0, 0);
         }
