@@ -1,0 +1,2 @@
+Ble_Led_Blink是一个开关灯程序，通过向蓝牙发送0x00开灯，0x01关灯。
+使用时把本目录下的Ble_Led_Blink文件夹丢到STM32_Platform\product\application\juma目录下，双击CAF.uvprojx即可运行程序，可以通过apk文件夹里的apk来测试程序。
