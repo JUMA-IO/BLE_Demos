@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".CarActivity" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imagebt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="29dp"
+            android:src="@drawable/car" />
+
+        <Spinner
+            android:id="@+id/car_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="200dp" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/bt4"
+        android:layout_width="221dp"
+        android:layout_height="92dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/bt2"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/btdown" />
+
+    <Button
+        android:id="@+id/bt3"
+        android:layout_width="110dp"
+        android:layout_height="186dp"
+        android:layout_alignBottom="@+id/bt4"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="77dp"
+        android:background="@drawable/btright" />
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="110dp"
+        android:layout_height="186dp"
+        android:layout_alignBottom="@+id/bt3"
+        android:layout_alignTop="@+id/bt3"
+        android:layout_toLeftOf="@+id/bt3"
+        android:background="@drawable/btleft" />
+
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="220dp"
+        android:layout_height="92dp"
+        android:layout_above="@+id/bt4"
+        android:layout_alignTop="@+id/bt1"
+        android:layout_marginRight="35dp"
+        android:layout_toLeftOf="@+id/bt1"
+        android:background="@drawable/btup" />
+
+</RelativeLayout>
