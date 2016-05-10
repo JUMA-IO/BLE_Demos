@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Light control</string>
+    <string name="action_settings">Scan</string>
+    <string name="refresh">Refresh</string>
+    <string name="app_title">Light control</string>
+    <string name="back">Back</string>
+    <string name="title_activity_new">NewActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_scan">Light control</string>
+    <drawable name="clr_normal">#98c4e9</drawable>
+    <drawable name="clr_pressed">#20000000</drawable>
+</resources>

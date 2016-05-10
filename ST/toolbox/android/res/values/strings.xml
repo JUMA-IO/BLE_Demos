@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cannon Toolbox</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_magnetometer">Magnetometer</string>
+    <string name="title_activity_barometer">Barometer</string>
+    <string name="title_activity_cube_activitty">CubeActivitty</string>
+    <string name="title_activity_car">CarActivity</string>
+    <string name="title_activity_rbg">RBGActivity</string>
+    <string name="title_activity_trh">TRHActivity</string>
+    <drawable name="clr_normal">#98c4e9</drawable>
+    <drawable name="clr_pressed">#20000000</drawable>
+</resources>

@@ -1,0 +1,355 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScanActivity"
+    android:orientation="vertical"  >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#98c4e9"
+        android:gravity="center"
+        android:text="小钢炮传感器监测"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin" >
+
+        <TableLayout
+             android:layout_width="fill_parent"
+             android:layout_height="0dp"
+             android:layout_weight="9" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center|left" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temperature:" />
+
+                <ProgressBar
+                    android:id="@+id/pb1"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#98c4e9" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center|left" >
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="RH:" />
+
+                <ProgressBar
+                    android:id="@+id/pb2"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#98c4e9" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+              >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pressure:" />
+
+                <ProgressBar
+                    android:id="@+id/pb3"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#000000" />
+
+            </TableRow>
+             <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+              >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X:" />
+
+                <ProgressBar
+                    android:id="@+id/pb4"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#000000" />
+
+            </TableRow>
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1"
+                 android:gravity="center|left" >
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Y:" />
+
+                 <ProgressBar
+                     android:id="@+id/pb5"
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+
+                 <TextView
+                     android:id="@+id/tv5"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center|left"
+                     android:paddingLeft="5dp"
+                     android:textColor="#000000" />
+
+             </TableRow>
+              <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1"
+                 android:gravity="center|left" >
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Z:" />
+
+                 <ProgressBar
+                     android:id="@+id/pb6"
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+
+                 <TextView
+                     android:id="@+id/tv6"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center|left"
+                     android:paddingLeft="5dp"
+                     android:textColor="#98c4e9" />
+
+             </TableRow>
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1" 
+                 android:gravity="center|left">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="vx:" />
+
+                   <ProgressBar
+                       android:id="@+id/pb7"
+                       style="?android:attr/progressBarStyleHorizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+                   <TextView
+                       android:id="@+id/tv7"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center|left"
+                       android:paddingLeft="5dp"
+                       android:textColor="#98c4e9" />
+
+             </TableRow>
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1" 
+                 android:gravity="center|left">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="vy:" />
+
+                   <ProgressBar
+                       android:id="@+id/pb8"
+                       style="?android:attr/progressBarStyleHorizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+                   <TextView
+                       android:id="@+id/tv8"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center|left"
+                       android:paddingLeft="5dp"
+                       android:textColor="#98c4e9" />
+
+             </TableRow>
+              <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1" 
+                 android:gravity="center|left">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="vz:" />
+
+                   <ProgressBar
+                       android:id="@+id/pb9"
+                       style="?android:attr/progressBarStyleHorizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+                   <TextView
+                       android:id="@+id/tv9"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center|left"
+                       android:paddingLeft="5dp"
+                       android:textColor="#98c4e9" />
+
+             </TableRow>
+              <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1" 
+                 android:gravity="center|left">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="RH(%RH):" />
+
+                   <ProgressBar
+                       android:id="@+id/pb10"
+                       style="?android:attr/progressBarStyleHorizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+                   <TextView
+                       android:id="@+id/tv10"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center|left"
+                       android:paddingLeft="5dp"
+                       android:textColor="#98c4e9" />
+
+             </TableRow>
+              <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1" 
+                 android:gravity="center|left">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="RH(%RH):" />
+
+                   <ProgressBar
+                       android:id="@+id/pb11"
+                       style="?android:attr/progressBarStyleHorizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+                   <TextView
+                       android:id="@+id/tv11"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center|left"
+                       android:paddingLeft="5dp"
+                       android:textColor="#98c4e9" />
+
+             </TableRow>
+              <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1" 
+                 android:gravity="center|left">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="RH(%RH):" />
+
+                   <ProgressBar
+                       android:id="@+id/pb12"
+                       style="?android:attr/progressBarStyleHorizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+                   <TextView
+                       android:id="@+id/tv12"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center|left"
+                       android:paddingLeft="5dp"
+                       android:textColor="#98c4e9" />
+
+             </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

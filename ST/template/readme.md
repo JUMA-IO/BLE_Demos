@@ -1,0 +1,3 @@
+template是一个程序模板。
+
+可以在STM32_Platform\application\juma目录下找到嵌入式程序，双击CAF.uvprojx即可运行程序，可以通过apk文件夹里的apk来测试程序。

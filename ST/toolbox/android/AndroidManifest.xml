@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.juma.cannontoolbox"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="19" />
+        <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.juma.cannontoolbox.CannonToolboxActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.juma.cannontoolbox.MagnetometerActivity"
+            android:label="@string/title_activity_magnetometer" >
+        </activity>
+        <activity
+            android:name="com.juma.cannontoolbox.BarometerActivity"
+            android:label="@string/title_activity_barometer" >
+        </activity>
+        <activity
+            android:name="com.juma.cannontoolbox.CubeActivity"
+            android:label="@string/title_activity_cube_activitty" >
+        </activity>
+        <activity
+            android:name="com.juma.cannontoolbox.OTAActivity"
+            android:label="@string/title_activity_car" >
+        </activity>
+        <activity
+            android:name="com.juma.cannontoolbox.RBGActivity"
+            android:label="@string/title_activity_rbg" >
+        </activity>
+        <activity
+            android:name="com.juma.cannontoolbox.TRHActivity"
+            android:label="@string/title_activity_trh" >
+        </activity>
+    </application>
+
+</manifest>

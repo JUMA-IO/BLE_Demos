@@ -1,0 +1,3 @@
+9-axis-sensor_fifo_int是一个9轴的应用demo，即将时时9轴数据发送到手机，并通过手机显示出来。
+
+可以在STM32_Platform\application\juma目录下找到嵌入式程序，双击CAF.uvprojx即可运行程序，可以通过apk文件夹里的apk来测试程序。
