@@ -1,0 +1,6 @@
+framework module JumaBluetoothSDK {
+  umbrella header "JumaBluetoothSDK.h"
+
+  export *
+  module * { export * }
+}
