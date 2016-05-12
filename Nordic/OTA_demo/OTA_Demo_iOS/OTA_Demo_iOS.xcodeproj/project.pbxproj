@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D457BCD01CE41D54009F4BB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BCCF1CE41D54009F4BB0 /* main.m */; };
+		D457BCD31CE41D54009F4BB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BCD21CE41D54009F4BB0 /* AppDelegate.m */; };
+		D457BCD61CE41D54009F4BB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BCD51CE41D54009F4BB0 /* ViewController.m */; };
+		D457BCD91CE41D54009F4BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D457BCD71CE41D54009F4BB0 /* Main.storyboard */; };
+		D457BCDB1CE41D54009F4BB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D457BCDA1CE41D54009F4BB0 /* Assets.xcassets */; };
+		D457BCDE1CE41D54009F4BB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D457BCDC1CE41D54009F4BB0 /* LaunchScreen.storyboard */; };
+		D457BCE91CE41D54009F4BB0 /* OTA_Demo_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BCE81CE41D54009F4BB0 /* OTA_Demo_iOSTests.m */; };
+		D457BCF41CE41D54009F4BB0 /* OTA_Demo_iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BCF31CE41D54009F4BB0 /* OTA_Demo_iOSUITests.m */; };
+		D457BD091CE42226009F4BB0 /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BD081CE42226009F4BB0 /* DeviceCell.m */; };
+		D457BD0C1CE42361009F4BB0 /* DevicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BD0B1CE42361009F4BB0 /* DevicesTableViewController.m */; };
+		D457BD0F1CE425C9009F4BB0 /* JumaBluetoothSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D457BD0E1CE425C9009F4BB0 /* JumaBluetoothSDK.framework */; };
+		D457BD121CE429BE009F4BB0 /* JumaDevice+RSSIExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BD111CE429BE009F4BB0 /* JumaDevice+RSSIExtension.m */; };
+		D457BD181CE43136009F4BB0 /* UIAlertView+JUMAExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BD171CE43136009F4BB0 /* UIAlertView+JUMAExtension.m */; };
+		D457BD1D1CE43870009F4BB0 /* JumaFirmwareUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BD1A1CE43870009F4BB0 /* JumaFirmwareUpdater.m */; };
+		D457BD1E1CE43870009F4BB0 /* JumaOtaModeSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BD1C1CE43870009F4BB0 /* JumaOtaModeSetter.m */; };
+		D457BD211CE43899009F4BB0 /* JumaDevice+OtaModeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BD201CE43899009F4BB0 /* JumaDevice+OtaModeExtension.m */; };
+		D457BD251CE45655009F4BB0 /* app.ota.bin in Resources */ = {isa = PBXBuildFile; fileRef = D457BD241CE45655009F4BB0 /* app.ota.bin */; };
+		D457BD281CE46570009F4BB0 /* NSTimer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = D457BD271CE46570009F4BB0 /* NSTimer+Block.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D457BCE51CE41D54009F4BB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D457BCC31CE41D54009F4BB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D457BCCA1CE41D54009F4BB0;
+			remoteInfo = OTA_Demo_iOS;
+		};
+		D457BCF01CE41D54009F4BB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D457BCC31CE41D54009F4BB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D457BCCA1CE41D54009F4BB0;
+			remoteInfo = OTA_Demo_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D457BCCB1CE41D54009F4BB0 /* OTA_Demo_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTA_Demo_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D457BCCF1CE41D54009F4BB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D457BCD11CE41D54009F4BB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D457BCD21CE41D54009F4BB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D457BCD41CE41D54009F4BB0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D457BCD51CE41D54009F4BB0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D457BCD81CE41D54009F4BB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D457BCDA1CE41D54009F4BB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D457BCDD1CE41D54009F4BB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D457BCDF1CE41D54009F4BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D457BCE41CE41D54009F4BB0 /* OTA_Demo_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTA_Demo_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D457BCE81CE41D54009F4BB0 /* OTA_Demo_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTA_Demo_iOSTests.m; sourceTree = "<group>"; };
+		D457BCEA1CE41D54009F4BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D457BCEF1CE41D54009F4BB0 /* OTA_Demo_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTA_Demo_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D457BCF31CE41D54009F4BB0 /* OTA_Demo_iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTA_Demo_iOSUITests.m; sourceTree = "<group>"; };
+		D457BCF51CE41D54009F4BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D457BD071CE42226009F4BB0 /* DeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCell.h; sourceTree = "<group>"; };
+		D457BD081CE42226009F4BB0 /* DeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceCell.m; sourceTree = "<group>"; };
+		D457BD0A1CE42361009F4BB0 /* DevicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevicesTableViewController.h; sourceTree = "<group>"; };
+		D457BD0B1CE42361009F4BB0 /* DevicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicesTableViewController.m; sourceTree = "<group>"; };
+		D457BD0E1CE425C9009F4BB0 /* JumaBluetoothSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JumaBluetoothSDK.framework; sourceTree = "<group>"; };
+		D457BD101CE429BE009F4BB0 /* JumaDevice+RSSIExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JumaDevice+RSSIExtension.h"; sourceTree = "<group>"; };
+		D457BD111CE429BE009F4BB0 /* JumaDevice+RSSIExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JumaDevice+RSSIExtension.m"; sourceTree = "<group>"; };
+		D457BD161CE43136009F4BB0 /* UIAlertView+JUMAExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+JUMAExtension.h"; sourceTree = "<group>"; };
+		D457BD171CE43136009F4BB0 /* UIAlertView+JUMAExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+JUMAExtension.m"; sourceTree = "<group>"; };
+		D457BD191CE43870009F4BB0 /* JumaFirmwareUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumaFirmwareUpdater.h; sourceTree = "<group>"; };
+		D457BD1A1CE43870009F4BB0 /* JumaFirmwareUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumaFirmwareUpdater.m; sourceTree = "<group>"; };
+		D457BD1B1CE43870009F4BB0 /* JumaOtaModeSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumaOtaModeSetter.h; sourceTree = "<group>"; };
+		D457BD1C1CE43870009F4BB0 /* JumaOtaModeSetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumaOtaModeSetter.m; sourceTree = "<group>"; };
+		D457BD1F1CE43899009F4BB0 /* JumaDevice+OtaModeExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JumaDevice+OtaModeExtension.h"; sourceTree = "<group>"; };
+		D457BD201CE43899009F4BB0 /* JumaDevice+OtaModeExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JumaDevice+OtaModeExtension.m"; sourceTree = "<group>"; };
+		D457BD241CE45655009F4BB0 /* app.ota.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = app.ota.bin; sourceTree = "<group>"; };
+		D457BD261CE46570009F4BB0 /* NSTimer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Block.h"; sourceTree = "<group>"; };
+		D457BD271CE46570009F4BB0 /* NSTimer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Block.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D457BCC81CE41D54009F4BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D457BD0F1CE425C9009F4BB0 /* JumaBluetoothSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D457BCE11CE41D54009F4BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D457BCEC1CE41D54009F4BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D457BCC21CE41D54009F4BB0 = {
+			isa = PBXGroup;
+			children = (
+				D457BCCD1CE41D54009F4BB0 /* OTA_Demo_iOS */,
+				D457BCE71CE41D54009F4BB0 /* OTA_Demo_iOSTests */,
+				D457BCF21CE41D54009F4BB0 /* OTA_Demo_iOSUITests */,
+				D457BD0D1CE425B9009F4BB0 /* Frameworks */,
+				D457BCCC1CE41D54009F4BB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D457BCCC1CE41D54009F4BB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D457BCCB1CE41D54009F4BB0 /* OTA_Demo_iOS.app */,
+				D457BCE41CE41D54009F4BB0 /* OTA_Demo_iOSTests.xctest */,
+				D457BCEF1CE41D54009F4BB0 /* OTA_Demo_iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D457BCCD1CE41D54009F4BB0 /* OTA_Demo_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D457BCD11CE41D54009F4BB0 /* AppDelegate.h */,
+				D457BCD21CE41D54009F4BB0 /* AppDelegate.m */,
+				D457BCD41CE41D54009F4BB0 /* ViewController.h */,
+				D457BCD51CE41D54009F4BB0 /* ViewController.m */,
+				D457BD071CE42226009F4BB0 /* DeviceCell.h */,
+				D457BD081CE42226009F4BB0 /* DeviceCell.m */,
+				D457BD0A1CE42361009F4BB0 /* DevicesTableViewController.h */,
+				D457BD0B1CE42361009F4BB0 /* DevicesTableViewController.m */,
+				D457BCD71CE41D54009F4BB0 /* Main.storyboard */,
+				D457BCDA1CE41D54009F4BB0 /* Assets.xcassets */,
+				D457BCDC1CE41D54009F4BB0 /* LaunchScreen.storyboard */,
+				D457BCDF1CE41D54009F4BB0 /* Info.plist */,
+				D457BCCE1CE41D54009F4BB0 /* Supporting Files */,
+			);
+			path = OTA_Demo_iOS;
+			sourceTree = "<group>";
+		};
+		D457BCCE1CE41D54009F4BB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D457BD241CE45655009F4BB0 /* app.ota.bin */,
+				D457BCCF1CE41D54009F4BB0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D457BCE71CE41D54009F4BB0 /* OTA_Demo_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				D457BCE81CE41D54009F4BB0 /* OTA_Demo_iOSTests.m */,
+				D457BCEA1CE41D54009F4BB0 /* Info.plist */,
+			);
+			path = OTA_Demo_iOSTests;
+			sourceTree = "<group>";
+		};
+		D457BCF21CE41D54009F4BB0 /* OTA_Demo_iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D457BCF31CE41D54009F4BB0 /* OTA_Demo_iOSUITests.m */,
+				D457BCF51CE41D54009F4BB0 /* Info.plist */,
+			);
+			path = OTA_Demo_iOSUITests;
+			sourceTree = "<group>";
+		};
+		D457BD0D1CE425B9009F4BB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D457BD1F1CE43899009F4BB0 /* JumaDevice+OtaModeExtension.h */,
+				D457BD201CE43899009F4BB0 /* JumaDevice+OtaModeExtension.m */,
+				D457BD191CE43870009F4BB0 /* JumaFirmwareUpdater.h */,
+				D457BD1A1CE43870009F4BB0 /* JumaFirmwareUpdater.m */,
+				D457BD1B1CE43870009F4BB0 /* JumaOtaModeSetter.h */,
+				D457BD1C1CE43870009F4BB0 /* JumaOtaModeSetter.m */,
+				D457BD261CE46570009F4BB0 /* NSTimer+Block.h */,
+				D457BD271CE46570009F4BB0 /* NSTimer+Block.m */,
+				D457BD161CE43136009F4BB0 /* UIAlertView+JUMAExtension.h */,
+				D457BD171CE43136009F4BB0 /* UIAlertView+JUMAExtension.m */,
+				D457BD0E1CE425C9009F4BB0 /* JumaBluetoothSDK.framework */,
+				D457BD101CE429BE009F4BB0 /* JumaDevice+RSSIExtension.h */,
+				D457BD111CE429BE009F4BB0 /* JumaDevice+RSSIExtension.m */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D457BCCA1CE41D54009F4BB0 /* OTA_Demo_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D457BCF81CE41D54009F4BB0 /* Build configuration list for PBXNativeTarget "OTA_Demo_iOS" */;
+			buildPhases = (
+				D457BCC71CE41D54009F4BB0 /* Sources */,
+				D457BCC81CE41D54009F4BB0 /* Frameworks */,
+				D457BCC91CE41D54009F4BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTA_Demo_iOS;
+			productName = OTA_Demo_iOS;
+			productReference = D457BCCB1CE41D54009F4BB0 /* OTA_Demo_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D457BCE31CE41D54009F4BB0 /* OTA_Demo_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D457BCFB1CE41D54009F4BB0 /* Build configuration list for PBXNativeTarget "OTA_Demo_iOSTests" */;
+			buildPhases = (
+				D457BCE01CE41D54009F4BB0 /* Sources */,
+				D457BCE11CE41D54009F4BB0 /* Frameworks */,
+				D457BCE21CE41D54009F4BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D457BCE61CE41D54009F4BB0 /* PBXTargetDependency */,
+			);
+			name = OTA_Demo_iOSTests;
+			productName = OTA_Demo_iOSTests;
+			productReference = D457BCE41CE41D54009F4BB0 /* OTA_Demo_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D457BCEE1CE41D54009F4BB0 /* OTA_Demo_iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D457BCFE1CE41D54009F4BB0 /* Build configuration list for PBXNativeTarget "OTA_Demo_iOSUITests" */;
+			buildPhases = (
+				D457BCEB1CE41D54009F4BB0 /* Sources */,
+				D457BCEC1CE41D54009F4BB0 /* Frameworks */,
+				D457BCED1CE41D54009F4BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D457BCF11CE41D54009F4BB0 /* PBXTargetDependency */,
+			);
+			name = OTA_Demo_iOSUITests;
+			productName = OTA_Demo_iOSUITests;
+			productReference = D457BCEF1CE41D54009F4BB0 /* OTA_Demo_iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D457BCC31CE41D54009F4BB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = JUMA;
+				TargetAttributes = {
+					D457BCCA1CE41D54009F4BB0 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					D457BCE31CE41D54009F4BB0 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D457BCCA1CE41D54009F4BB0;
+					};
+					D457BCEE1CE41D54009F4BB0 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D457BCCA1CE41D54009F4BB0;
+					};
+				};
+			};
+			buildConfigurationList = D457BCC61CE41D54009F4BB0 /* Build configuration list for PBXProject "OTA_Demo_iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D457BCC21CE41D54009F4BB0;
+			productRefGroup = D457BCCC1CE41D54009F4BB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D457BCCA1CE41D54009F4BB0 /* OTA_Demo_iOS */,
+				D457BCE31CE41D54009F4BB0 /* OTA_Demo_iOSTests */,
+				D457BCEE1CE41D54009F4BB0 /* OTA_Demo_iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D457BCC91CE41D54009F4BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D457BCDE1CE41D54009F4BB0 /* LaunchScreen.storyboard in Resources */,
+				D457BD251CE45655009F4BB0 /* app.ota.bin in Resources */,
+				D457BCDB1CE41D54009F4BB0 /* Assets.xcassets in Resources */,
+				D457BCD91CE41D54009F4BB0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D457BCE21CE41D54009F4BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D457BCED1CE41D54009F4BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D457BCC71CE41D54009F4BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D457BD1E1CE43870009F4BB0 /* JumaOtaModeSetter.m in Sources */,
+				D457BD0C1CE42361009F4BB0 /* DevicesTableViewController.m in Sources */,
+				D457BD181CE43136009F4BB0 /* UIAlertView+JUMAExtension.m in Sources */,
+				D457BCD61CE41D54009F4BB0 /* ViewController.m in Sources */,
+				D457BD281CE46570009F4BB0 /* NSTimer+Block.m in Sources */,
+				D457BCD31CE41D54009F4BB0 /* AppDelegate.m in Sources */,
+				D457BD211CE43899009F4BB0 /* JumaDevice+OtaModeExtension.m in Sources */,
+				D457BCD01CE41D54009F4BB0 /* main.m in Sources */,
+				D457BD091CE42226009F4BB0 /* DeviceCell.m in Sources */,
+				D457BD121CE429BE009F4BB0 /* JumaDevice+RSSIExtension.m in Sources */,
+				D457BD1D1CE43870009F4BB0 /* JumaFirmwareUpdater.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D457BCE01CE41D54009F4BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D457BCE91CE41D54009F4BB0 /* OTA_Demo_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D457BCEB1CE41D54009F4BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D457BCF41CE41D54009F4BB0 /* OTA_Demo_iOSUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D457BCE61CE41D54009F4BB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D457BCCA1CE41D54009F4BB0 /* OTA_Demo_iOS */;
+			targetProxy = D457BCE51CE41D54009F4BB0 /* PBXContainerItemProxy */;
+		};
+		D457BCF11CE41D54009F4BB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D457BCCA1CE41D54009F4BB0 /* OTA_Demo_iOS */;
+			targetProxy = D457BCF01CE41D54009F4BB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D457BCD71CE41D54009F4BB0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D457BCD81CE41D54009F4BB0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D457BCDC1CE41D54009F4BB0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D457BCDD1CE41D54009F4BB0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D457BCF61CE41D54009F4BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D457BCF71CE41D54009F4BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D457BCF91CE41D54009F4BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = OTA_Demo_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.juma.OTA-Demo-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D457BCFA1CE41D54009F4BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = OTA_Demo_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.juma.OTA-Demo-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D457BCFC1CE41D54009F4BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OTA_Demo_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.juma.OTA-Demo-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTA_Demo_iOS.app/OTA_Demo_iOS";
+			};
+			name = Debug;
+		};
+		D457BCFD1CE41D54009F4BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OTA_Demo_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.juma.OTA-Demo-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTA_Demo_iOS.app/OTA_Demo_iOS";
+			};
+			name = Release;
+		};
+		D457BCFF1CE41D54009F4BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = OTA_Demo_iOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.juma.OTA-Demo-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OTA_Demo_iOS;
+			};
+			name = Debug;
+		};
+		D457BD001CE41D54009F4BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = OTA_Demo_iOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.juma.OTA-Demo-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OTA_Demo_iOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D457BCC61CE41D54009F4BB0 /* Build configuration list for PBXProject "OTA_Demo_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D457BCF61CE41D54009F4BB0 /* Debug */,
+				D457BCF71CE41D54009F4BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D457BCF81CE41D54009F4BB0 /* Build configuration list for PBXNativeTarget "OTA_Demo_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D457BCF91CE41D54009F4BB0 /* Debug */,
+				D457BCFA1CE41D54009F4BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D457BCFB1CE41D54009F4BB0 /* Build configuration list for PBXNativeTarget "OTA_Demo_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D457BCFC1CE41D54009F4BB0 /* Debug */,
+				D457BCFD1CE41D54009F4BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D457BCFE1CE41D54009F4BB0 /* Build configuration list for PBXNativeTarget "OTA_Demo_iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D457BCFF1CE41D54009F4BB0 /* Debug */,
+				D457BD001CE41D54009F4BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D457BCC31CE41D54009F4BB0 /* Project object */;
+}
