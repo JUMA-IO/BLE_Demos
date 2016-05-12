@@ -1,3 +1,5 @@
 9-axis-sensor_fifo_int是一个9轴的应用demo，即将时时9轴数据发送到手机，并通过手机显示出来。
 
+JUMA_9-axis-test.apk是根据CannonToolboxActivity内的CubeActivity改的，大家可自行添加余下数据。
+
 可以在STM32_Platform\application\juma目录下找到嵌入式程序，双击CAF.uvprojx即可运行程序，可以通过apk文件夹里的apk来测试程序。
